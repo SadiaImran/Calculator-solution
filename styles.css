@@ -1,0 +1,424 @@
+:root{
+    /* THEME 1 COLORS */
+    /* COLORS */
+    --Very-dark-desaturated-blue-main-background: hsl(222, 26%, 31%);
+    --Very-dark-desaturated-blue-toggle-background-keypad-background: hsl(223, 31%, 20%);
+    --Very-dark-desaturated-blue-screen-background: hsl(224, 36%, 15%);
+
+    /* KEYS COLORS */
+    --Desaturated-dark-blue-key-background: hsl(225, 21%, 49%);
+    --Desaturated-dark-blue-key-shadow: hsl(224, 28%, 35%);
+
+    --Red-key-background-toggle: hsl(6, 63%, 50%);
+    --Dark-red-key-shadow: hsl(6, 70%, 34%);
+
+    --Light-grayish-orange-key-background: hsl(30, 25%, 89%);
+    --Grayish-orange-key-shadow: hsl(28, 16%, 65%);
+
+    /* TEXT COLORS */
+    --Very-dark-grayish-blue: hsl(221, 14%, 31%);
+    --White: hsl(0, 0%, 100%);
+
+    /* FONT Family */
+
+    --League-Spartan-font-family : 'League Spartan', sans-serif;
+    /* Font Sizes */
+    --font-size-200 :0.9rem ;
+    --font-size-400: 1.2rem ; 
+    --font-size-600: 2.5rem ; 
+
+    --font-size-number : 32px ; 
+
+
+    /* Spacing */
+    --space-small : 8px;
+    --space-medium : 16px;
+    --space-large : 24px;
+    --space-extra-large:32px ;
+    /* Border Radiuses */
+    --border-round-small :0.5rem ; 
+    --border-round-medium: 2rem ; 
+    --border-round-full:100vmax;
+
+   
+         --Light-gray-main-background: hsl(0, 0%, 90%) ; 
+        --Grayish-red-toggle-background-keypad-background: hsl(0, 5%, 81%) ; 
+        --Very-light-gray-screen-background: hsl(0, 0%, 93%) ;
+
+
+        --Dark-moderate-cyan-key-background: hsl(185, 42%, 37%);
+        --Very-dark-cyan-key-shadow: hsl(185, 58%, 25%);
+
+        --Orange-key-background-toggle: hsl(25, 98%, 40%);
+        --Dark-orange-key-shadow: hsl(25, 99%, 27%);
+
+        --Light-grayish-yellow-key-background: hsl(45, 7%, 89%);
+        --Dark-grayish-orange-key-shadow: hsl(35, 11%, 61%);
+
+        --Very-dark-grayish-yellow: hsl(60, 10%, 19%);
+        --White-text: hsl(0, 0%, 100%);
+        
+
+
+        --Very-dark-violet-main-background: hsl(268, 75%, 9%) ; 
+        --Very-dark-violet-toggle-background-keypad-background-screen-background: hsl(268, 71%, 12%);
+        
+        
+        --Dark-violet-key-background: hsl(281, 89%, 26%);
+        --Vivid-magenta-key-shadow: hsl(285, 91%, 52%);
+        
+        --Pure-cyan-key-background-toggle: hsl(176, 100%, 44%);
+        --Soft-cyan-key-shadow: hsl(177, 92%, 70%);
+        
+        --Very-dark-violet-key-background: hsl(268, 47%, 21%);
+        --Dark-magenta-key-shadow: hsl(290, 70%, 36%);
+        
+    
+        
+        --Light-yellow: hsl(52, 100%, 62%);
+        --Very-dark-blue: hsl(198, 20%, 13%);
+        --White-text: hsl(0, 0%, 100%);
+    
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--Very-dark-desaturated-blue-main-background);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--League-Spartan-font-family);
+    font-weight: 700;
+    color: white;
+   
+}
+
+body.theme2{
+    background-color: var(--Light-gray-main-background);
+    color: var(--Very-dark-grayish-yellow);
+}
+
+body.theme3{
+    background-color: var(--Very-dark-violet-main-background);
+    color: var(--Light-yellow);
+}
+
+
+.container {
+
+  
+    justify-self: center;
+   max-width: 54rem;
+}
+.header { 
+    display: flex;
+
+    height: auto;
+    justify-content: space-between;
+    margin-bottom: 1em;
+    
+}
+.right-side {
+    display: flex;
+    /* color: white;
+    font-family: var(--League-Spartan-font-family); */
+    gap: var(--space-medium);
+    font-size: 10px;
+    align-items: flex-end;
+}
+
+.theme-box {
+    font-size: 8px;
+   display: flex;
+   flex-direction: column;
+   gap: .5em;
+
+
+}
+
+
+.theme-box .label-number{
+    margin-top: -15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.theme-box .label-radio {
+    background-color: var(--Very-dark-desaturated-blue-toggle-background-keypad-background);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: var(--border-round-medium);
+    width: 50px;
+    height: 20px;
+    padding: .6em;
+    
+}
+.theme2 .label-radio{
+    background-color: var(--Grayish-red-toggle-background-keypad-background);
+}
+.theme3 .label-radio{
+    background-color: var(--Very-dark-violet-toggle-background-keypad-background-screen-background);
+}
+
+
+
+
+
+.label-radio input{
+    appearance: none;
+    width: .8em;
+    height: .8em;
+    text-align: center;
+  border-radius: var(--border-round-full);
+  transition: 0.2s;
+  cursor: pointer;
+    background-color: var(--Red-key-background-toggle);
+}
+
+.label-radio input:hover {
+   filter: brightness(1.5); 
+}
+
+
+#theme-2{
+    opacity: 0;
+   background-color: var(--Orange-key-background-toggle);
+    
+}
+#theme-3{
+    opacity: 0;
+    background-color: var(--Pure-cyan-key-background-toggle);
+}
+
+
+
+
+.section-2 {
+    width: 100%;
+    height: auto;
+    margin: 1em 0 ;
+}
+.section-2 input{
+    width: 100%;
+    height: 80px;
+    border-radius: var(--border-round-small) ;
+    background-color: var(--Very-dark-desaturated-blue-screen-background);
+    border: none;
+    text-align: end;
+    outline: none;
+    padding: 1em;
+    
+    font-size: px;
+}
+
+.section-2 input.theme-2{
+    background-color: var(--White);
+}
+#text-area {
+    font-size: var(--font-size-number);
+    color: white;
+    font-family: var(--League-Spartan-font-family);
+    letter-spacing: .1em;
+
+}
+.theme2 #text-area{
+    background-color: var(--Very-light-gray-screen-background);
+    color: var(--Very-dark-grayish-yellow);
+}
+.theme3 #text-area{
+    background-color: var(--Very-dark-violet-toggle-background-keypad-background-screen-background);
+    color: var(--Light-yelloww);
+}
+.section-3{
+    padding: 1.5rem 2rem;
+    border-radius: var(--border-round-small);
+   background-color: var(--Very-dark-desaturated-blue-screen-background);
+
+    }
+
+.theme2 .section-3{
+    background-color: var(--Grayish-red-toggle-background-keypad-background);
+}
+.theme3 .section-3 {
+    background-color: var(--Very-dark-violet-toggle-background-keypad-background-screen-background);
+}
+.section-3 .number-container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+    gap: var(--space-large);
+
+}
+.section-3 .number-container button {
+    font-family: var(--League-Spartan-font-family);
+    background-color: var(--Light-grayish-orange-key-background);
+    color: var(--Very-dark-grayish-blue);
+    border-radius: .5rem;
+    border: none;
+    outline: none;
+    box-shadow: inset 0px -4px 0px var(--Grayish-orange-key-shadow) ;
+    padding: .4em .6em;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: var(--font-size-number);
+    transition: ease-in .4s;
+
+}
+
+.theme2 .section-3 .number-container button{
+        background-color: var(--Light-grayish-yellow-key-background);
+        color: var(--Very-dark-grayish-yellow);
+        box-shadow: inset 0px -4px 0px var(--Dark-grayish-orange-key-shadow) ;
+
+}
+
+.theme3 .section-3 .number-container button{
+    background-color: var(--Very-dark-violet-key-background);
+    color: var(--Light-yelloww);
+    box-shadow: inset 0px -4px 0px var(--Dark-magenta-key-shadow) ;
+
+}
+
+#DEL{
+    color: white;
+    background-color:var(--Desaturated-dark-blue-key-background);
+    box-shadow: inset 0px -4px 0px var(--Desaturated-dark-blue-key-shadow);
+}
+.theme2 #DEL {
+    background-color: var(--Dark-moderate-cyan-key-background);
+    box-shadow: inset 0px -4px 0px var(--Very-dark-cyan-key-shadow);
+}
+.theme3 #DEL {
+    background-color: var(--Dark-violet-key-background);
+    box-shadow: inset 0px -4px 0px var(--Vivid-magenta-key-shadow);
+}
+
+.section-3 .number-container button:hover{
+  filter: brightness(1.2);
+}
+
+.action-container{
+    margin-top: var(--space-large);
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-large);
+    
+}
+.action-container button{
+    font-family: var(--League-Spartan-font-family);
+    border-radius: .5rem;
+    border: none;
+    outline: none;
+    font-size: var(--font-size-number);
+    color: var(--White);
+    padding: .5em;
+    letter-spacing: .05em;
+    cursor: pointer;
+
+}
+.action-container #reset{
+    flex: 1;
+    background-color: var(--Desaturated-dark-blue-key-background);
+    box-shadow: inset 0px -5px 0px var(--Desaturated-dark-blue-key-shadow);
+
+}
+.theme2 .action-container #reset{
+    background-color: var(--Dark-moderate-cyan-key-background);
+    box-shadow: inset 0px -3px 0px var(--Very-dark-cyan-key-shadow);
+}
+
+.theme3 .action-container #reset  {
+    background-color: var(--Dark-violet-key-background);
+    box-shadow: inset 0px -4px 0px var(--Vivid-magenta-key-shadow);
+}
+.action-container #equals{
+    flex: 1;
+    background-color: var(--Red-key-background-toggle);
+    box-shadow: inset 0px -3px 0px var(--Dark-red-key-shadow);
+
+}
+.theme2 .action-container #equals{
+    background-color:var(--Orange-key-background-toggle);
+    box-shadow: inset 0px -3px 0px var(--Dark-orange-key-shadow);
+}
+.theme3 .action-container #equals{
+    background-color:var(--Pure-cyan-key-background-toggle);
+    box-shadow: inset 0px -3px 0px var(--Soft-cyan-key-shadow);
+}
+.action-container button:hover{
+    filter: brightness(1.5);
+}
+
+
+
+
+
+
+
+
+@media  screen and (max-width:760px) {
+        body{
+            width: 100%;
+            margin:  0 ;
+            padding:  0 ;
+            height: auto;
+            justify-content: flex-start ;
+
+
+        }
+        .container{
+           max-width:  100%;
+           margin: 0 .8em;
+         
+        }
+        .title{
+            margin-top: 1em;
+        }
+        .theme-box {
+                gap: var(--space-small);
+        }
+
+        .section-2 input {
+            font-size: small;
+        }
+        .section-3{
+         
+           padding: 1rem;
+        
+            }
+        .section-3 .number-container {
+   
+            gap: 10px;
+        }
+        .section-3 .number-container button {
+            padding: .6em .4em;
+            font-weight: 500;
+            font-size: 24px;
+        
+        }
+        .action-container{
+            margin-top: var(--space-small);
+            gap: var(--space-small);
+            
+        }
+        #DEL{
+            font-size: 18px;
+        }
+        .action-container button{
+           
+            font-size: 18px;
+            padding: .8em 1em;
+            letter-spacing: 0em;
+          
+        
+        }
+        
+
+}
